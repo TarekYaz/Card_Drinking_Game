@@ -1,0 +1,51 @@
+h1 {
+    color:darkmagenta;
+}
+
+/* body {
+    background-color: black;
+} */
+
+/* div {
+    height: 500px;
+    width: 40%;
+    margin: auto;
+    border: 5px solid white;
+} */
+
+#cardBorder {
+    width: 500px;
+    height: 500px;
+    border: 5px solid black;
+    margin: auto;
+    border-radius: 50px;
+}
+
+#cardName {
+    text-align: center;
+}
+
+#chugSecs {
+    text-align: center;
+}
+
+#cardImg {
+    display: block;
+    height: 50%;
+    width: auto;
+    margin: auto;
+}
+
+#players {
+    border: 5px solid black;
+}
+
+.drawBtn {
+    display: block;
+    margin: 30px auto;
+    padding: 20px;
+}
+
+.startBtnLink {
+    all: unset;
+}
