@@ -5,25 +5,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="getDecked.css">
-    <title>Get Decked</title>
-    <script src="startGame.js" defer></script>
+    <title>Get Decked Online</title>
+    <script src="script.js" type="module"></script>
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-
-    <h1>Get Decked Online</h1>
-
-    <label for="player">Player</label>
-    <input name="player" type="text" id="name" placeholder="Enter a name">
-
-    <button type="button"><a class="startBtnLink" href="getdecked.html">Start</a></button>
-
-    <ol id="playerList"></ol>
-
-    
-    <button type="button" onclick="clearPlayers()">Clear all</button>
-
+    <div id="deck">
+        <div class="card" id="cardName">NAME OF CARD</div>
+        <div class="card" id="cardImg">🃏</div>
+        <div class="card" id="cardDesc">THIS IS A CARD DESCRIPTION. IT DESCRIBES WHAT THE RULE OF THIS CARD IS.</div>
+    </div>
 </body>
 
 </html>
