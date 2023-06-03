@@ -78,36 +78,38 @@ const cardsArray = [
 
 export default class Deck {
     constructor(cards = buildDeck()) {
-        this.cards = cards;
+        this.cards = cards
     }
 
     get numberOfCards() {
-        return this.cards.length;
+        return this.cards.length
     }
 
     shuffle() {
         for (let i = this.numberOfCards - 1; i > 0; i--) {
-            const newIndex = Math.floor(Math.random() * (i + 1));
-            const oldValue = this.cards[newIndex];
-            this.cards[newIndex] = this.cards[i];
-            this.cards[i] = oldValue;
+            const newIndex = Math.floor(Math.random() * (i + 1))
+            const oldValue = this.cards[newIndex]
+            this.cards[newIndex] = this.cards[i]
+            this.cards[i] = oldValue
         }
     }
 
-    discard() {
+    pop() {
         return this.cards.shift()
     }
 }
 
 class Card {
-    constructor(name, image) {
+    constructor(name, image, description) {
         this.name = name
         this.image = image
+        this.description = description
     }
     
     getHTML() {
         document.getElementById("cardName").innerHTML = this.name
         document.getElementById("cardImg").innerHTML = this.image
+        document.getElementById("cardDesc").innerHTML = this.description
     }
 }
 
@@ -117,8 +119,9 @@ function buildDeck() {
         let cardName = entry[0]
         let cardQuantity = entry[1]
         let cardImage = entry[2]
+        let cardDescription = entry[3]
         for (let i = 0; i < cardQuantity; i++) { //
-            arr.push(new Card(cardName, cardImage))
+            arr.push(new Card(cardName, cardImage, cardDescription))
         }
     })
     return arr
