@@ -111,6 +111,166 @@ class Card {
         document.getElementById("cardImg").innerHTML = this.image
         document.getElementById("cardDesc").innerHTML = this.description
     }
+
+    getRule() {
+        let points = Number(0)
+        switch (this.name) {
+            case "Airplane Mode":
+                points += Number(1)
+                break;
+            case "Attention Seeker":
+                points += Number(1)
+                break;
+            case "Baby Got Back":
+                points += Number(1)
+                break;
+            case "Birthday Suit":
+                points += Number(1)
+                break;
+            case "Boat Race":
+                points += Number(1)
+                break;
+            case "Bust a Rhyme":
+                points += Number(1)
+                break;
+            case "Categories":
+                points += Number(1)
+                break;
+            case "Censored Content":
+                points += Number(1)
+                break;
+            case "Chicken Choker":
+                points += Number(1)
+                break;
+            case "Choose A Victim":
+                points += Number(1)
+                break;
+            case "Chug O'clock":
+                points += Number(1)
+                break;
+            case "Dead Battery":
+                points += Number(1)
+                break;
+            case "Dirty Bomb":
+                points += Number(1)
+                break;
+            case "Drip King":
+                points += Number(1)
+                break;
+            case "Drunkest Player":
+                points += Number(1)
+                break;
+            case "Dumbo":
+                points += Number(1)
+                break;
+            case "Everyone Drink":
+                points += Number(1)
+                break;
+            case "Friends":
+                points += Number(1)
+                break;
+            case "Guess the Animal":
+                points += Number(1)
+                break;
+            case "Happy Birthday":
+                points += Number(1)
+                break;
+            case "Hot Seat":
+                points += Number(1)
+                break;
+            case "Kama Sutra":
+                points += Number(1)
+                break;
+            case "Last Hook Up":
+                points += Number(1)
+                break;
+            case "Most Likely To":
+                points += Number(1)
+                break;
+            case "Most Whipped":
+                points += Number(1)
+                break;
+            case "Mystery Shot":
+                points += Number(1)
+                break;
+            case "Neighbours Drink":
+                points += Number(1)
+                break;
+            case "Oldest Drinks":
+                points += Number(1)
+                break;
+            case "Patchy Beard":
+                points += Number(1)
+                break;
+            case "Protection":
+                points += Number(1)
+                break;
+            case "Radio Check":
+                points += Number(1)
+                break;
+            case "Rock, Paper, Scissors":
+                points += Number(1)
+                break;
+            case "Shag Marry Kill":
+                points += Number(1)
+                break;
+            case "Shortest Player":
+                points += Number(1)
+                break;
+            case "Shotgun":
+                points += Number(1)
+                break;
+            case "Single Pringle":
+                points += Number(1)
+                break;
+            case "Sink The Ship":
+                points += Number(1)
+                break;
+            case "Slowest Drinker":
+                points += Number(1)
+                break;
+            case "Sobriety Test":
+                points += Number(1)
+                break;
+            case "Soul Mates":
+                points += Number(1)
+                break;
+            case "Spelling Bee":
+                points += Number(1)
+                break;
+            case "Tactical Chunder":
+                points += Number(1)
+                break;
+            case "Tallest Player":
+                points += Number(1)
+                break;
+            case "Text Alert":
+                points += Number(1)
+                break;
+            case "This is not a funeral":
+                points += Number(1)
+                break;
+            case "Top Shagger":
+                points += Number(1)
+                break;
+            case "Tramp Stamp":
+                points += Number(1)
+                break;
+            case "Waterfall":
+                points += Number(1)
+                break;
+            case "Worst Driver":
+                points += Number(1)
+                break;
+            case "You're Fired":
+                points += Number(1)
+                break;
+            case "Youngest Drinks":
+                points += Number(1)
+                break;
+        }
+        return points
+    }
 }
 
 function buildDeck() {

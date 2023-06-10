@@ -11,10 +11,16 @@
     user-select: none;
 }
 
+#cardImg {
+    font-size: 4rem;
+}
+
 .card {
     padding: 10% 10px 10% 10px;
 }
 
-#cardImg {
-    font-size: 4rem;
+.yourTurn {
+    font-size: 2rem;
 }
+
+
