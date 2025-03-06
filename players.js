@@ -1,7 +1,7 @@
 export default class Players {
     constructor() {
         this.playerList = []
-        this.turn = 0
+        this.currentTurn = 0
     }
 
     get numberOfPlayers() {
@@ -9,7 +9,7 @@ export default class Players {
     }
 
     get currentPlayer() {
-        return this.playerList[this.turn]
+        return this.playerList[this.currentTurn]
     }
 
     addPlayer(nameInput) {
@@ -19,27 +19,39 @@ export default class Players {
     
     getHTML() {
         document.getElementById("players").innerHTML = ''
+        document.getElementById("buttons").innerHTML = ''
 
         this.playerList.forEach((player, index) => {
             let newRow = document.createElement('tr')
+            let newButton = document.createElement('input')
+
             newRow.setAttribute("id", "player" + index)
             newRow.innerHTML = `<td>${player.name}</td><td>${player.sips}</td>`
             document.getElementById("players").appendChild(newRow)
+            
+            newButton.setAttribute("type", "button")
+            newButton.setAttribute("value", player.name)
+            newButton.setAttribute("class", "overlayBtns")
+            document.getElementById("buttons").appendChild(newButton)
         })
 
-        this.highlightPlayer(this.turn)
+        this.highlightPlayer(this.currentTurn)
     }
 
-    highlightPlayer(turn) {
+    getPlayer(index) {
+        return this.playerList[index]
+    }
+
+    highlightPlayer(number) {
         if (this.currentPlayer != null) {
-            document.getElementById("player" + turn).setAttribute("class", "yourTurn")
+            document.getElementById("player" + number).setAttribute("class", "yourTurn")
         }
     }
 
     nextTurn() {
-        this.turn += Number(1)
-        if (this.turn == this.numberOfPlayers) {
-            this.turn = 0
+        this.currentTurn += Number(1)
+        if (this.currentTurn == this.numberOfPlayers) {
+            this.currentTurn = 0
         }
     }
 }
